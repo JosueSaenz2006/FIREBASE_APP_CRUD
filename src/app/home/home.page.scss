@@ -35,3 +35,50 @@ ion-title {
   font-weight: bold;
   font-size: 24px;
 }
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 100px; /* ajusta la altura según tus necesidades */
+  background-color: #1a91ec; /* color de fondo del pie de página */
+}
+
+.waves-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+}
+
+
+
+@keyframes wave {
+  0% {
+    transform: translateX(0) translateY(0) translateZ(0);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-25px) translateZ(0);
+  }
+}
+
+#wave {
+  animation: wave 2s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    d: path("M0 80 Q30 60 60 80 T120 80 T180 80 T240 80 T300 80 T360 80 T420 80 T480 80 T540 80 T600 80 V200 H0Z");
+  }
+  100% {
+    d: path("M0 80 Q30 100 60 80 T120 80 T180 80 T240 80 T300 80 T360 80 T420 80 T480 80 T540 80 T600 80 V200 H0Z");
+  }
+}
+
+ion-content {
+  --ion-background-color: #00bfffa1;
+}
+
+
+

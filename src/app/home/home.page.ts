@@ -46,7 +46,7 @@ export class HomePage {
   delete(p:Item){
     this.load.presentLoading();
     this.bd.delete(`Personas`,p.id).then(()=>{
-      this.toast.showToast("Exito al Borrar","success","trash-outline");
+      this.toast.showToast("Exito al Borrar :D","success :D","trash-outline :D");
       this.load.dismissLoading();
     }).catch(()=>{
       this.toast.showToast("Error al Borrar","danger","sad-outline");
