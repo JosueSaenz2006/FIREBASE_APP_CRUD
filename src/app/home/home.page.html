@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-title>App Restaurante</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -26,13 +26,24 @@
       <ion-input type="text" [(ngModel)]="newPersona.apellido"></ion-input>
     </ion-item>
   </ion-list>
-
+<br>
   <ion-list>
     <ion-item *ngFor="let p of Personas" >
+      <ion-card>
+        <img alt="{{p.cedula}}" src="https://www.elmueble.com/medio/2023/02/08/25-recetas-de-tupper-para-preparar-el-dia-antes_afc5e2b6_230208170301_900x900.jpg" />
+        <ion-card-header>
+          <ion-card-title>{{p.cedula}}</ion-card-title>
+          <ion-card-subtitle>{{p.nombre}}</ion-card-subtitle>
+        </ion-card-header>
+  
+        <ion-card-content>
+          {{p.apellido}}  
+          </ion-card-content>
+      </ion-card>
       <ion-label>{{p.cedula}}</ion-label>
       <ion-label>{{p.nombre}}</ion-label>
       <ion-label>{{p.apellido}}</ion-label>
-      <ion-button (click)="delete(p)" color="primary" slot="end" fill="clear">
+      <ion-button (click)="delete(p)" slot="end" fill="clear">
         <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
       </ion-button>
     </ion-item>
@@ -44,12 +55,4 @@
     </ion-fab-button>
   </ion-fab>
 </ion-content>
-<footer>
-  <div class="wave-container">
-    <svg viewBox="0 0 600 200">
-      <path id="wave" d="M0 80 Q30 60 60 80 T120 80 T180 80 T240 80 T300 80 T360 80 T420 80 T480 80 T540 80 T600 80 V200 H0Z"style="fill: blue;"></path>
-    </svg>
-  </div>
-  <br><br><br><br>
- 
-</footer>
+

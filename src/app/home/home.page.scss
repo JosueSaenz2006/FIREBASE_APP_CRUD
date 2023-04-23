@@ -1,6 +1,5 @@
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
@@ -16,9 +15,7 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-
-  color: #8c8c8c;
-
+  color: transparent;
   margin: 0;
 }
 
@@ -26,59 +23,31 @@
   text-decoration: none;
 }
 
-.list-formulario{
-  margin-bottom: 20px;
-  border: 1px solid #fff;
-}
-
 ion-title {
   font-weight: bold;
   font-size: 24px;
 }
-
-footer {
-  position: relative;
-  width: 100%;
-  height: 100px; /* ajusta la altura según tus necesidades */
-  background-color: #1a91ec; /* color de fondo del pie de página */
-}
-
-.waves-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  overflow: hidden;
+ion-content {
+  --ion-background-color: transparent;
 }
 
 
+$verde: #0088ff;
+$celeste: #00f7ff;
 
-@keyframes wave {
-  0% {
-    transform: translateX(0) translateY(0) translateZ(0);
-  }
-  100% {
-    transform: translateX(-50%) translateY(-25px) translateZ(0);
-  }
+ion-content {
+  background-color: white;
+  background-image: linear-gradient(to bottom,  $verde, $celeste,);
 }
 
-#wave {
-  animation: wave 2s linear infinite;
-}
-
-@keyframes wave {
-  0% {
-    d: path("M0 80 Q30 60 60 80 T120 80 T180 80 T240 80 T300 80 T360 80 T420 80 T480 80 T540 80 T600 80 V200 H0Z");
-  }
-  100% {
-    d: path("M0 80 Q30 100 60 80 T120 80 T180 80 T240 80 T300 80 T360 80 T420 80 T480 80 T540 80 T600 80 V200 H0Z");
-  }
+ion-header {
+  --background: transparent;
 }
 
 ion-content {
-  --ion-background-color: #00bfffa1;
+  --background: transparent;
 }
 
-
-
+.list-formulario {
+  background: linear-gradient(to bottom, #0080ff, #00ffff);
+}
